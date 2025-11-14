@@ -57,10 +57,10 @@ jobs:
       
       # Build Docker images for scanning
       - name: Build backend image
-        run: docker buildx build ... -t pawsconnect-backend:test ./backend
+        run: docker buildx build -t pawsconnect-backend:test ./backend
       
       - name: Build frontend image
-        run: docker buildx build ... -t pawsconnect-frontend:test ./frontend
+        run: docker buildx build -t pawsconnect-frontend:test ./frontend
       
       # Scan Docker images for vulnerabilities
       - name: Run Trivy scan on backend image
